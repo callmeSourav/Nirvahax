@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- Favicon -->
+   <link rel="icon" type="image/x-icon" href="favicon/android-chrome-512x512.png">
+  <title>Blog - Nirvahax Marketplace</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+   <link rel="stylesheet" href="blog-post.css"> 
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+
+  <nav class="navbar bg-white shadow-lg">
+    <div class="max-w-6xl mx-auto px-4">
+        <div class="flex justify-between items-center">
+            
+            <!-- Logo on the Left Side -->
+             <div class="flex items-center space-x-4">
+               
+                 <a href="Index-1.html">
+                    <img src="images/NXM.gif" alt="Nirvahax Markitplace Logo" class="h-20 w-auto rounded-full">
+                </a>  
+
+                
+                
+            </div>
+
+            <!-- Navbar Links -->
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="about.html" class="nav-link py-4 px-2">About Us</a>
+                <a href="services.html" class="nav-link py-4 px-2">Services</a>
+               <!--  <a href="price.html" class="nav-link py-4 px-2">Pricing</a> -->
+                <!-- <a href="#demo-work" class="nav-link py-4 px-2">Our Work</a> -->
+                <!-- <a href="#blog" class="nav-link py-4 px-2">Blog</a> -->
+                <a href="Index-1.html#contact" class="nav-link py-4 px-2">Contact</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+  <!-- Blog Hero Section -->
+  <section id="blog" class="blog-hero">
+    <div class="container">
+      <h2>Welcome to Our Blog</h2>
+      <p>Explore the latest trends, insights, and updates from Nirvahax Marketplace.</p>
+    </div>
+  </section>
+
+  <!-- Blog Posts Section -->
+  <section class="blog-posts">
+    <div class="container">
+      <h2>Latest Posts</h2>
+      <div class="posts-grid">
+      <!-- Blog Post 1 -->
+<div class="post">
+  <img src="images/post-1.webp" alt="Blog Post 1">
+  <h3>How to Grow Your Business Online</h3>
+  <p>Learn the best strategies to scale your business in the digital marketplace.</p>
+  <a href="post-1.html" class="btn-gradient">Read More</a>
+</div>
+
+<!-- Blog Post 2 -->
+<div class="post">
+  <img src="images/post-2.webp" alt="Blog Post 2">
+  <h3>Top Trends in E-Commerce</h3>
+  <p>Discover the latest trends shaping the future of e-commerce.</p>
+  <a href="post-2.html" class="btn-gradient">Read More</a>
+</div>
+
+<!-- Blog Post 3 -->
+<div class="post">
+  <img src="images/post-3.webp" alt="Blog Post 3">
+  <h3>Payment Solutions for Modern Businesses</h3>
+  <p>Explore secure and efficient payment processing options.</p>
+  <a href="post-3.html" class="btn-gradient">Read More</a>
+</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Categories Section -->
+  <section class="blog-categories">
+    <div class="container">
+      <h2>Categories</h2>
+      <div class="categories-grid">
+        <a href="#" class="category">Business Growth</a>
+        <a href="#" class="category">E-Commerce Trends</a>
+        <a href="#" class="category">Payment Solutions</a>
+        <a href="#" class="category">Vendor Tips</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-columns">
+        <div class="column">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index-1.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="index-1.html#services">Services</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="index-1.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="column">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Refund Policy</a></li>
+          </ul>
+        </div>
+        <div class="column">
+          <h4>Follow Us</h4>
+          <ul>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">Instagram</a></li>
+          </ul>
+        </div>
+        <div class="column">
+          <h4>Newsletter</h4>
+          <form>
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit" class="btn-gradient">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Nirvahax Marketplace. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Example: Filter blog posts by category
+function filterPosts(category) {
+  const posts = document.querySelectorAll('.post');
+  posts.forEach(post => {
+    if (post.dataset.category === category || category === 'all') {
+      post.style.display = 'block';
+    } else {
+      post.style.display = 'none';
+    }
+  });
+}
+  </script>
+</body>
+</html>

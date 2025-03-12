@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nirvahax Markitplace</title>
+   <!-- Favicon -->
+   <link rel="icon" type="image/x-icon" href="favicon/android-chrome-512x512.png">
+   <link rel="stylesheet" href="style.css">
+   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+<style>
+/* General Styles */
+.services-section {
+  padding: 50px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #f0f4ff, #e0e9ff);
+}
+
+.services-section h2 {
+  font-size: 2.7rem;
+  font: bold;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.services-section p {
+  font-size: 1.4rem;
+  color: #34495e;
+  margin-bottom: 40px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.service-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.service-card h3 {
+  font-size: 1.5rem;
+  color: #2980b9;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  font-size: 1rem;
+  color: #7f8c8d;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from { transform: translateY(-50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.close-modal {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #e74c3c;
+}
+
+#modal-title {
+  font-size: 1.8rem;
+  color: #2980b9;
+  margin-bottom: 20px;
+}
+
+#modal-features {
+  list-style: none;
+  padding: 0;
+}
+
+#modal-features li {
+  font-size: 1.1rem;
+  color: #34495e;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+}
+
+#modal-features li::before {
+  content: "✔";
+  color: #27ae60;
+  position: absolute;
+  left: 0;
+}
+/* Icon Styles */
+.service-card i {
+  font-size: 2.5rem;
+  color: #2980b9;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.service-card:hover i {
+  transform: scale(1.1);
+  color: #27ae60;
+}
+</style>
+<body>
+    
+
+ 
+ <!-- Navbar -->
+ <nav class="navbar bg-white shadow-lg">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="flex justify-between">
+        <div class="flex space-x-7">
+        <!-- <a href="Index-1.html" class="">
+          <img src="NXM.gif" alt="Nirvahax Markitplace Logo" class=" h-24 w-auto">
+          <!-- <span class="font-semibold md:text-4xl text-gray-50 text-lg ml-3"></span> !--
+        </a> -->
+        <a href="Index-1.html">
+          <video autoplay loop muted playsinline class="w-24 h-auto rounded-lg">
+              <source src="videos/Nirvhax.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+          </video>
+      </a>   
+      </div>  
+
+     
+      
+
+      <div class="hidden md:flex items-center space-x-1">
+        <a href="Index-1.html" class="nav-link py-4 px-2">Home</a>
+        <a href="about.html" class="nav-link py-4 px-2">About us</a>
+        <!-- <a href="Index-1.html#services" class="nav-link py-4 px-2">Services</a> -->
+        <!-- <a href="#community" class="nav-link py-4 px-2">Community</a> -->
+        <!-- <a href="#clients" class="nav-link py-4 px-2">Clients & Projects</a> -->
+        <!-- <a href="#demo-work" class="nav-link py-4 px-2">Our Work</a> -->
+        <a href="blog.html"  class="nav-link py-4 px-2">Blog</a>
+        <a href="Index-1.html#contact" class="nav-link py-4 px-2">Contact</a>
+      </div>
+    </div>
+  </div>
+</nav>
+<section class="services-section">
+  <h2>Our Services</h2>
+  <p>We offer a wide range of services to help your business grow.</p>
+  <div class="services-grid">
+    <!-- Service Cards with Icons -->
+    <div class="service-card" data-service="market-research">
+      <i class="fas fa-chart-line"></i>
+      <h3>Market Research</h3>
+      <p>Uncover insights to drive your business forward.</p>
+    </div>
+    <div class="service-card" data-service="data-visualization">
+      <i class="fas fa-chart-pie"></i>
+      <h3>Data Visualization</h3>
+      <p>Transform data into actionable visuals.</p>
+    </div>
+    <div class="service-card" data-service="social-media-marketing">
+      <i class="fas fa-hashtag"></i>
+      <h3>Social Media Marketing</h3>
+      <p>Boost your brand's online presence.</p>
+    </div>
+    <div class="service-card" data-service="seo-optimization">
+      <i class="fas fa-search-plus"></i>
+      <h3>SEO Optimization</h3>
+      <p>Rank higher and attract more traffic.</p>
+    </div>
+    <div class="service-card" data-service="website-development">
+      <i class="fas fa-code"></i>
+      <h3>Website Development</h3>
+      <p>Build stunning, functional websites.</p>
+    </div>
+    <div class="service-card" data-service="sales-growth-strategies">
+      <i class="fas fa-rocket"></i>
+      <h3>Sales Growth Strategies</h3>
+      <p>Strategies to skyrocket your sales.</p>
+    </div>
+    <div class="service-card" data-service="brand-development">
+      <i class="fas fa-palette"></i>
+      <h3>Brand Development</h3>
+      <p>Create a memorable brand identity.</p>
+    </div>
+    <div class="service-card" data-service="video-marketing">
+      <i class="fas fa-video"></i>
+      <h3>Video Marketing</h3>
+      <p>Engage your audience with compelling videos.</p>
+    </div>
+    <div class="service-card" data-service="ecommerce-marketing">
+      <i class="fas fa-shopping-cart"></i>
+      <h3>E-commerce Marketing</h3>
+      <p>Drive sales for your online store.</p>
+    </div>
+  </div>
+
+  <!-- Service Details Modal -->
+  <div id="service-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h3 id="modal-title">Service Title</h3>
+      <ul id="modal-features">
+        <!-- Features will be dynamically added here -->
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- FontAwesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<!-- Footer Section -->
+<footer class="bg-gray-800 text-white py-12">
+  <div class="container mx-auto px-6">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Company Info -->
+      <div>
+        <h3 class="text-2xl font-bold mb-4">NirvahaX Markitplace</h3>
+        <p class="text-gray-400">Your trusted partner in AI-powered marketing and digital solutions.</p>
+      </div>
+
+      <!-- Contact Info -->
+      <div>
+        <h4 class="text-xl font-semibold mb-4">Contact Us</h4>
+        <ul class="text-gray-400 space-y-2">
+          <li><i class="fas fa-phone mr-2"></i> +91 8851 761 599</li>
+          <li><i class="fas fa-envelope mr-2"></i> info@nirvahaxmarkitplace.in</li>
+          <li><i class="fas fa-globe mr-2"></i> <a href="https://www.nirvahaxmarkitplace.in" target="_blank" class="hover:text-blue-400">www.nirvahaxmarkitplace.in</a></li>
+        </ul>
+      </div>
+
+      <!-- Social & Legal Links -->
+      <div>
+        <h4 class="text-xl font-semibold mb-4">Connect With Us</h4>
+        <div class="flex space-x-4 mb-6">
+          <a href="https://www.linkedin.com/company/niravahx-markitplace/?viewAsMember=true" target="_blank" class="text-gray-400 hover:text-blue-400">
+            <i class="fab fa-linkedin text-2xl"></i>
+          </a>
+        </div>
+        <h4 class="text-xl font-semibold mb-4">Legal</h4>
+        <ul class="text-gray-400 space-y-2">
+          <li><a href="#" class="hover:text-blue-400">Privacy Policy</a></li>
+          <li><a href="#" class="hover:text-blue-400">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- Copyright -->
+    <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+      <p>&copy; 2025 NirvahaxMarkitplace.in. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+<script>
+  // Service Features Data
+const serviceFeatures = {
+  "market-research": ["Competitor Analysis", "Consumer Behavior Insights", "Market Trend Forecasting"],
+  "data-visualization": ["Interactive Dashboards", "Infographic Design", "Data Storytelling"],
+  "social-media-marketing": ["Content Creation", "Ad Campaign Management", "Audience Engagement"],
+  "seo-optimization": ["Keyword Research", "On-Page SEO", "Link Building"],
+  "website-development": ["Responsive Design", "E-commerce Integration", "Custom CMS Development"],
+  "sales-growth-strategies": ["Sales Funnel Optimization", "Lead Generation", "CRM Implementation"],
+  "brand-development": ["Brand Identity Design", "Brand Guidelines", "Brand Positioning"],
+  "video-marketing": ["Video Production", "YouTube Strategy", "Social Media Videos"],
+  "ecommerce-marketing": ["Product Listing Optimization", "Shopping Ads", "Conversion Rate Optimization"]
+};
+
+// Get DOM Elements
+const serviceCards = document.querySelectorAll(".service-card");
+const modal = document.getElementById("service-modal");
+const modalTitle = document.getElementById("modal-title");
+const modalFeatures = document.getElementById("modal-features");
+const closeModal = document.querySelector(".close-modal");
+
+// Open Modal with Service Details
+serviceCards.forEach(card => {
+  card.addEventListener("click", () => {
+    const service = card.getAttribute("data-service");
+    modalTitle.textContent = card.querySelector("h3").textContent;
+    modalFeatures.innerHTML = serviceFeatures[service].map(feature => `<li>${feature}</li>`).join("");
+    modal.style.display = "flex";
+  });
+});
+
+// Close Modal
+closeModal.addEventListener("click", () => {
+  modal.style.display = "none";
+});
+
+window.addEventListener("click", (event) => {
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+});
+</script>
+</body>
+</html>

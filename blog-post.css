@@ -1,0 +1,167 @@
+/* Blog Post Page Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f5f5f5;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+     margin: 0 auto; 
+  }
+  
+  /* Header */
+  header {
+    background: linear-gradient(to right, #1a2980, #26d0ce); 
+    
+    position: sticky; 
+    top: 0;
+   left: 0;
+   width: 100%;
+    
+   z-index:  1000;
+    color: white;
+    padding: 10px 0;
+  }
+  
+  header h1 {
+    margin: 0;
+  }
+  
+  nav ul {
+    list-style: none;
+    text-decoration: none; /* Remove underline */
+    padding: 0;
+    display: flex;
+    gap: 20px;
+  }
+  
+  nav ul li a {
+    color:white;
+    font-weight: bold;
+    text-decoration: none; /* Remove underline */
+
+  }
+  
+  /* Blog Post Content */
+  .blog-post {
+    padding: 50px 0;
+  }
+  
+  .post-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .post-header h2 {
+    font-size: 2.3rem;
+    margin-bottom: 10px;
+    
+  }
+  
+  .post-header .meta {
+    color: #666;
+    font-size: 0.9rem;
+  }
+  
+  .post-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .image-container {
+    width: 100%; /* Set the width of the container */
+    height: 5%; /* Set the height of the container */
+    border-radius: 10px; /* Make the container circular */
+    padding: 15px; /* Add padding inside the container */
+    display: flex; /* Use flexbox to center the image */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    overflow: hidden; /* Ensure the image doesn't overflow the container */
+    background-color: #f0f0f0; /* Optional: Add a background color */
+  }
+  
+  .image-container img {
+    width: 40%; /* Make the image fill the container */
+    height: 10%; /* Make the image fill the container */
+    object-fit: cover; /* Ensure the image covers the container without distortion */
+    border-radius: 10px; /* Match the container's border-radius */
+  }
+  
+  .post-content p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .post-content ul {
+    margin-bottom: 20px;
+  }
+  
+  .post-content ul li {
+    margin-bottom: 10px;
+  }
+  
+  .post-navigation {
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  .btn-gradient {
+    background: linear-gradient(45deg, #F6D365, #FDA085);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: transform 0.3s ease;
+  }
+  
+  .btn-gradient:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Footer Styles */
+footer {
+    background: #333; /* Dark background */
+    color: white; /* Text color */
+    padding: 50px 0;
+  }
+  
+  footer a {
+    text-decoration: none; /* Remove underline */
+    color: white; /* Default link color */
+    transition: color 0.3s ease; /* Smooth color transition */
+  }
+  
+  footer a:hover {
+    color: #F6D365; /* Change color on hover */
+  }
+  
+  .footer-columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .footer-columns h4 {
+    margin-bottom: 10px;
+  }
+  
+  .footer-columns ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+  }
+  
+  .footer-columns ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #444; /* Add a top border */
+  }

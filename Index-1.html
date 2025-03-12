@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nirvahax Markitplace</title>
+   <!-- Favicon -->
+   <link rel="icon" type="image/x-icon" href="favicon/android-chrome-512x512.png">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="feautre.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+  <style>
+  
+    @keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px); /* Smaller bounce */
+  }
+}
+
+.animate-bounce {
+  animation: bounce 2s infinite;
+}
+
+  /* Keyframes for smooth fly-in animation */
+  @keyframes smoothFlyIn {
+    from {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  /* Apply smooth animation to the heading */
+  .animate-smooth-fly-in {
+    animation: smoothFlyIn 1.5s ease-out forwards;
+    opacity: 0; /* Start invisible */
+  }
+
+  /* Apply smooth animation to the paragraph with a delay */
+  .animate-smooth-fly-in-delay {
+    animation: smoothFlyIn 1.5s ease-out 0.5s forwards;
+    opacity: 0; /* Start invisible */
+  }
+
+  /* Apply smooth animation to the button with a longer delay */
+  .animate-smooth-fly-in-delay-2 {
+    animation: smoothFlyIn 1.5s ease-out 1s forwards;
+    opacity: 0; /* Start invisible */
+  }
+
+  /* Hover effect for the button */
+  .hover\:scale-105:hover {
+    transform: scale(1.05);
+  }
+</style>
+<script type="text/javascript"
+src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+(function(){
+emailjs.init({
+publicKey: "emfxfBX9yv1E55LNK",
+});
+})();
+</script>
+</head>
+<body class="bg-gray-100 font-sans">
+
+     <!-- Top Bar -->
+  <!-- <div class="top-bar bg-white py-2">
+    <div class="container mx-auto px-6 flex justify-between items-center">
+      <!-- Contact Info --
+      <div class="flex space-x-4">
+        <a href="mailto:info@nirvahaxmarkitplace.in" class="text-blue-300  md:text-2xl hover:text-blue-700">
+          <i class="fas fa-envelope"></i> info@nirvahaxmarkitplace.in
+        </a>
+        <a href="tel:+91 8851 761 599" class="text-blue-300  md:text-2xl hover:text-blue-700">
+          <i class="fas fa-phone"></i> +91 8851 761 599
+        </a>
+      </div>
+      <a href="https://wa.me/918851761599?text=Hello%20there!%20I%20need%20help%20with%20your%20services." target="_blank" class="text-green-500 text-3xl">
+        <!-- <button style="background: #25D366; color: white; padding: 10px 10px; border: none; border-radius: 3px; font-size: 14px;"> --
+
+            <i class="fab fa-whatsapp"></i>
+        </button>
+    </a>
+      <!-- LinkedIn Profile Link --
+      <div>
+        <a href="https://www.linkedin.com/company/niravahx-markitplace/?viewAsMember=true" target="_blank" class="text-blue-300  md:text-2xl hover:text-blue-700">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </div>
+    </div>
+  </div> -->
+  <!-- Navbar -->
+  <!-- <nav class="navbar bg-white shadow-lg">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex justify-between"> -->
+         <!-- <div class="flex space-x-7">
+          <a href="#home" class="flex items-center py-4 px-2">
+            <img src="Nirvahax logo.jpg" alt="Nirvahax Markitplace Logo" class="h-16 rounded-full">
+            <!-- <span class="font-semibold md:text-4xl text-gray-50 text-lg ml-3"></span> --
+          </a>
+        </div>  -->
+
+        <!-- <div class="flex space-x-7">
+          <a href="#index-1.html" class="flex items-center py-4 px-2">
+            <video autoplay loop muted playsinline class="h-24 w-24  rounded-lg background-none">
+              <source src="Nirvahax video logo.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </a>
+        </div> -->
+        
+
+        <!-- <div class="hidden md:flex items-center space-x-1">
+          <a href="about.html" class="nav-link py-4 px-2">About us</a>
+          <a href="#services" class="nav-link py-4 px-2">Services</a>
+          <a href="price.html" class="nav-link py-4 px-2">Pricing</a>
+          <!-- <a href="#community" class="nav-link py-4 px-2">Community</a> -->
+          <!-- <a href="#clients" class="nav-link py-4 px-2">Clients & Projects</a> --
+          <a href="#demo-work" class="nav-link py-4 px-2">Our Work</a>
+          <a href="#blog"  class="nav-link py-4 px-2">Blog</a>
+          <a href="#contact" class="nav-link py-4 px-2">Contact</a>
+        </div>
+      </div>
+    </div>
+  </nav> -->
+
+
+  <nav class="navbar bg-white shadow-lg">
+    <div class="max-w-6xl mx-auto px-4">
+        <div class="flex justify-between items-center">
+            
+            <!-- Logo on the Left Side -->
+             <div class="flex items-center space-x-4">
+               
+                 <!-- <a href="#home">
+                    <img src="" alt="Nirvahax Markitplace Logo" class="h-24 w-auto rounded-full">
+                </a>   -->
+
+                <!-- Option 2: Video Logo -->
+                <!-- Uncomment this if you want a video logo instead of an image -->
+                 
+                  <a href="#home">
+                    <video autoplay loop muted playsinline class="w-24 h-auto rounded-lg">
+                        <source src="logo/Nirvhax.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </a>   
+                
+            </div>
+
+            <!-- Navbar Links -->
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="about.html" class="nav-link py-4 px-2">About Us</a>
+                <a href="services.html" class="nav-link py-4 px-2">Service</a>
+                <a href="price.html" class="nav-link py-4 px-2">Pricing</a>
+                <a href="new_community.html" class="nav-link py-4 px-2">Our Community</a>
+                <!-- <a href="our_team.html" class="nav-link py-4 px-2">Our Team</a> -->
+                <a href="#blog" class="nav-link py-4 px-2">Blog</a>
+                <a href="#contact" class="nav-link py-4 px-2">Contact</a>
+            </div>
+        </div>
+    </div>
+    
+</nav>
+
+
+    <!-- Hero Section with Video Slider -->
+<section id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
+    <!-- Video Slider Container -->
+    <div class="absolute w-full h-full">
+      <!-- Video 1 -->
+      <div class="video-slide absolute w-full h-full opacity-100 transition-opacity duration-1000">
+        <video autoplay muted loop class="w-full h-full object-cover">
+          <source src="videos/video-1.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <!-- Video 2 -->
+      <div class="video-slide absolute w-full h-full opacity-0 transition-opacity duration-1000">
+        <video autoplay muted loop class="w-full h-full object-cover">
+          <source src="videos/video-2.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <!-- Video 3 -->
+      <div class="video-slide absolute w-full h-full opacity-0 transition-opacity duration-1000">
+        <video autoplay muted loop class="w-full h-full object-cover">
+          <source src="videos/video-3.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+       <!-- Video 4 -->
+       <div class="video-slide absolute w-full h-full opacity-0 transition-opacity duration-1000">
+        <video autoplay muted loop class="w-full h-full object-cover">
+          <source src="videos/video-4.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+
+  
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-black bg-opacity-10 z-10"></div>
+  
+    <!-- Content -->
+    <div class="relative z-20 text-center px-6">
+      <h1 class="text-4xl md:text-6xl font-bold text-white  mb-4 animate-smooth-type-writer">Welcome to Nirvahax Markitplace</h1>
+      <p class="mt-4 text-lg md:text-2xl text-gray-200 mb-8 animate-smooth-type-writer-delay">Your trusted partner in innovative solutions and creative marketplaces.</p>
+      <div class="mt-8">
+        <a href="services.html" class="bg-blue-500 text-white px-6 py-3 rounded-full hover:bg-blue-600">Explore Our Services</a>
+      </div>
+    </div>
+  
+    <!-- Slider Navigation Buttons -->
+    <button id="prevButton" class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 p-2 rounded-full z-30 hover:bg-opacity-75">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+      </svg>
+    </button>
+    <button id="nextButton" class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 p-2 rounded-full z-30 hover:bg-opacity-75">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+      </svg>
+    </button>
+  </section>
+
+  <!-- Add this section to your existing page -->
+<section class="zig-zag-section">
+  <!-- Section Title and Subtitle -->
+  <div class="section-header">
+    <h1>Unlock Your Business Potential</h1>
+    <p>Discover how our innovative solutions can transform your business and drive growth.</p>
+  </div>
+
+  <!-- Card 1 -->
+  <div class="card left">
+    <div class="card-content">
+      <h2>Market Research</h2>
+      <p>Unlock the power of data-driven decisions with our comprehensive market research services.</p>
+      <ul>
+        <li>In-depth industry analysis and trend forecasting.</li>
+        <li>Consumer insights and behavior analysis.</li>
+        <li>Competitive benchmarking and SWOT analysis.</li>
+        <li>Customized reports tailored to your business needs.</li>
+      </ul>
+    </div>
+    <div class="card-image">
+      <img src="images/market research.jpg" alt="Market Research">
+    </div>
+  </div>
+
+  <!-- Card 2 -->
+  <div class="card right">
+    <div class="card-content">
+      <h2>Digital Marketing</h2>
+      <p>Transform your online presence with our cutting-edge digital marketing strategies.</p>
+      <ul>
+        <li>Search Engine Optimization (SEO) to boost visibility.</li>
+        <li>Social media marketing and paid advertising.</li>
+        <li>Content creation and email marketing campaigns.</li>
+        <li>Analytics-driven performance tracking.</li>
+      </ul>
+    </div>
+    <div class="card-image">
+      <img src="images/digital marketing.jpg" alt="Digital Marketing">
+    </div>
+  </div>
+
+  <!-- Card 3 -->
+  <div class="card left">
+    <div class="card-content">
+      <h2>Business Consulting</h2>
+      <p>Elevate your business with expert consulting services designed to optimize operations.</p>
+      <ul>
+        <li>Strategic planning and business model optimization.</li>
+        <li>Operational efficiency and process improvement.</li>
+        <li>Financial analysis and risk management.</li>
+        <li>Leadership coaching and team development.</li>
+      </ul>
+    </div>
+    <div class="card-image">
+      <img src="images/business consultant.jpg" alt="Business Consulting">
+    </div>
+  </div>
+  
+</section>
+ 
+<!-- <section class="expert-section">
+  <h1>What Our Experts Say</h1>
+  <p class="subtitle">Hear from our team about how Nirvahax Markitplace is solving major market problems and empowering businesses.</p>
+  <div class="expert-thoughts">
+    <!-- Sourav Sah - Founder --
+    <div class="expert-thought">
+      <img src="sourav sah.jpg" alt="Sourav Sah">
+      <div class="content">
+        <p>"Nirvahax Markitplace is revolutionizing the way businesses operate by providing a seamless platform for commerce. Our vision is to simplify processes and empower businesses to thrive in the digital economy. By addressing key market challenges, we are creating a community-driven ecosystem that benefits everyone. From small startups to large enterprises, Nirvahax is designed to scale with your business and provide the tools you need to succeed."</p>
+        <div class="author">Sourav Sah</div>
+        <div class="position">Founder, Nirvahax Markitplace</div>
+      </div>
+    </div> -->
+
+    <!-- Yash Gupta - CMO & Business Development
+    <div class="expert-thought">
+      <img src="yash gupta.jpg" alt="Yash Gupta">
+      <div class="content">
+        <p>"At Nirvahax, we believe in the power of collaboration and innovation. Our platform is designed to help businesses scale and reach new heights. By solving major market problems like accessibility and efficiency, we are paving the way for a brighter future for all our users. Whether it's through strategic partnerships or cutting-edge technology, we are committed to driving growth and creating value for our community."</p>
+        <div class="author">Yash Gupta</div>
+        <div class="position">CMO & Business Development, Nirvahax Markitplace</div>
+      </div>
+    </div>
+
+    <!-- Sonali Kumari - COO & Operations --
+    <div class="expert-thought">
+      <img src="sonali kumari.jpg" alt="Sonali Kumari">
+      <div class="content">
+        <p>"Efficiency and scalability are at the core of Nirvahax. We are committed to delivering exceptional value to our users by streamlining operations and solving real-world problems. Our platform is built to adapt and grow with the needs of businesses, ensuring long-term success. From supply chain management to customer engagement, Nirvahax provides the tools and insights you need to stay ahead of the competition."</p>
+        <div class="author">Sonali Kumari</div>
+        <div class="position">COO & Operations, Nirvahax Markitplace</div>
+      </div>
+    </div>
+
+    <!-- Suraj Yadav - CTO & Product Development --
+    <div class="expert-thought">
+      <img src="suraj yadav.jpg" alt="Suraj Yadav">
+      <div class="content">
+        <p>"Technology is the backbone of Nirvahax. We are constantly innovating to build robust, scalable, and user-friendly solutions that address the challenges businesses face today. Our platform is designed to empower users and drive growth in the digital age. From AI-driven analytics to seamless integrations, Nirvahax is at the forefront of technological innovation, helping businesses unlock their full potential."</p>
+        <div class="author">Suraj Yadav</div>
+        <div class="position">CTO & Product Development, Nirvahax Markitplace</div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<!-- research market section -->
+<section class="research-growth-section">
+  <div class="container">
+    <div class="split-layout">
+      <div class="text-content">
+        <h1>From Research to Growth: Your Partner in Digital Success</h1>
+        <p class="subheadline">We provide end-to-end research and digital marketing solutions to help your business thrive in the digital era.</p>
+        <p>The <strong>research market</strong> is the backbone of every successful business strategy. Before launching a product, it’s crucial to understand your market, audience, and competitors. At Nirvahax, our <strong>talented expert team</strong> conducts in-depth research to ensure your product fits the market and has the potential to succeed. But we don’t stop there—we also provide actionable strategies to help your company grow fast in the digital era.</p>
+        <ul class="offer-list">
+          <li>✅ Comprehensive Market Research</li>
+          <li>✅ Data-Driven Insights</li>
+          <li>✅ Digital Marketing Solutions</li>
+          <li>✅ Growth Strategies</li>
+        </ul>
+        <a href="services.html" class="cta-button">Explore Our Solutions</a>
+      </div>
+      <div class="image-content">
+        <img src="images/research.webp" alt="Research and Growth Illustration">
+      </div> 
+      
+    </div>
+  </div>
+</section>
+
+   
+   <!-- Marketing Strategy Section -->
+   <section id="marketing-strategy">
+    <div class="relative h-screen flex items-center justify-center overflow-hidden">
+    <!-- Full-Size Video Background -->
+    <video autoplay muted loop class="absolute w-full h-full object-cover z-0">
+      <source src="videos/Formulate a Marketing Plan (1).mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    </div>
+    </section>
+  
+
+
+ <!-- Demo Work/Ad Section -->
+<section id="demo-work" class="py-20 bg-gray-50">
+  <div class="container mx-auto px-6">
+    <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Our Work for the clients</h2>
+
+    <!-- Videos Section -->
+    <div class="mb-12">
+      <h3 class="text-2xl font-bold text-gray-800 mb-6">Videos</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Video 1 -->
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <video controls class="w-half rounded-lg">
+            <source src="videos/video-1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p class="mt-4 text-gray-1000">Demo Video 1: Social Media Campaign</p>
+        </div>
+        <!-- Video 2 -->
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <video controls class="w-full rounded-lg">
+            <source src="videos/video-7.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p class="mt-4 text-gray-1000">Demo Video 2: AI-Powered Market Research</p>
+        </div>
+        <!-- Video 3 -->
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <video controls class="w-full rounded-lg">
+            <source src="videos/video-5.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p class="mt-4 text-gray-1000">Demo Video 3: Website Development</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Logos Section -->
+    <div class="mb-12">
+      <h3 class="text-2xl font-bold text-gray-800 mb-6">Ads</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Logo 1 -->
+        <div class="bg-white p-6 rounded-lg shadow-lg flex items-center justify-center">
+          <video controls class="w-full rounded-lg">
+            <source src="videos/AD-1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <!-- Logo 2 -->
+        <div class="bg-white p-6 rounded-lg shadow-lg flex items-center justify-center">
+          <!-- <img src="AD-2.mp4" alt="Logo 2" class="w-32 h-32 object-contain"> -->
+          <video controls class="w-full rounded-lg">
+            <source src="videos/AD-2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <!-- Logo 3 -->
+        <div class="bg-white p-6 rounded-lg shadow-lg flex items-center justify-center">
+          <!-- <img src="images/logo-3.png" alt="Logo 3" class="w-32 h-32 object-contain"> -->
+          <video controls class="w-full rounded-lg">
+            <source src="videos/AD-1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </div>
+
+    <!-- Articles Section -->
+    <div>
+      <h3 class="text-2xl font-bold text-gray-800 mb-6">Market Research Articles</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Article 1 -->
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <h4 class="text-xl font-bold text-gray-800 mb-4">The Future of AI in Market Research</h4>
+          <p class="text-gray-600">
+            Discover how AI is transforming market research, enabling businesses to make data-driven decisions with real-time insights and predictive analytics.
+          </p>
+          <a href="blog.html" class="mt-4 inline-block text-blue-500 hover:text-blue-700">Read More →</a>
+        </div>
+        <!-- Article 2 -->
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <h4 class="text-xl font-bold text-gray-800 mb-4">Top Trends in Digital Marketing for 2025</h4>
+          <p class="text-gray-600">
+            Explore the latest trends in digital marketing, from AI-powered automation to personalized customer experiences.
+          </p>
+          <button>
+          <a href="blog.html" class="mt-4 inline-block text-blue-500 hover:text-blue-700">Read More →</a>
+        </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  
+  <!-- Contact Page Content -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p class="subtitle">We'd love to hear from you! Reach out to us for any inquiries or collaborations.</p>
+
+      <div class="contact-content">
+        <!-- Contact Form -->
+          <div class="contact-form">
+          <form id="contactForm" action="sendMail" method="POST">
+            <div class="form-group" >
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+            </div>
+            <div class="form-group">
+              <label for="service">Select Service</label>
+              <select id="services" name="services" required>
+                <option value="">Choose a service</option>
+                <option value="Social Media Marketing">Social Media Marketing</option>
+                <option value="Video Editing">Video Editing</option>
+                <option value="SEO Optimization">SEO Optimization</option>
+                <option value="Data Visualization">Data Visualization</option>
+                <option value="Pay-Per-Click Advertising (PPC)">Pay-Per-Click Advertising (PPC)</option>
+                <option value="Email Marketing">Email Marketing</option>
+                <option value="Google & Facebook Ads">Google & Facebook Ads</option>
+                <option value="Website Development">Website Development</option>
+                <option value="Content Marketing">Content Marketing</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Enter your message" rows="5" required></textarea>
+            </div>
+            <button type="submit" onclick="sendMail()" class="submit-btn">Send Message</button>
+          </form>
+        </div>  
+      </div>
+    </div>
+  </section>
+
+   <!-- blog section -->
+  <section  id="blog" class="py-20 bg-blue-30">
+    <div class="container">
+    <div class="column  mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center text-gray-800">Subscribe for our Blogs</h2>
+      <form>
+        <input type="email" placeholder="Enter your email" required>
+        <button type="submit" class="btn-gradient">Subscribe</button>
+      </form>
+    </div>
+  </div>
+  </section>
+
+  <!-- Chat icon -->
+  <div class="chat-icon" onclick="toggleChat()">💬</div>
+
+  <!-- Chat container -->
+  <div class="chat-container" id="chat-container">
+      <div class="chat-header">Chatbot</div>
+      <div class="chat-messages" id="chat-messages">
+          <!-- Chat messages will appear here -->
+      </div>
+      <div class="chat-input">
+          <input type="text" id="user-input" placeholder="Type a message..." onkeypress="handleKeyPress(event)">
+          <button onclick="sendMessage()">Send</button>
+      </div>
+  </div>
+
+ <!-- Footer Section -->
+ <footer class="bg-gray-800 text-white py-12">
+    <div class="container mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Company Info -->
+        <div>
+          <h3 class="text-2xl font-bold mb-4">NirvahaX Markitplace</h3>
+          <p class="text-gray-400">Your trusted partner in AI-powered marketing and digital solutions.</p>
+        </div>
+
+        <!-- Contact Info -->
+        <div>
+          <h4 class="text-xl font-semibold mb-4">Contact Us</h4>
+          <ul class="text-gray-400 space-y-2">
+            <li><i class="fas fa-phone mr-2"></i> +91-8851-761-599</li>
+            <li><i class="fas fa-envelope mr-2"></i> info@nirvahaxmarkitplace.in</li>
+            <li><i class="fas fa-globe mr-2"></i> <a href="https://www.nirvahaxmarkitplace.in" target="_blank" class="hover:text-blue-400">www.nirvahaxmarkitplace.in</a></li>
+          </ul>
+        </div>
+
+        <!-- Social & Legal Links -->
+        <div>
+          <h4 class="text-xl font-semibold mb-4">Connect With Us</h4>
+          <div class="flex space-x-4 mb-6">
+            <a href="https://www.linkedin.com/company/niravahx-markitplace/?viewAsMember=true" target="_blank" class="text-gray-400 hover:text-blue-400">
+              <i class="fab fa-linkedin text-2xl"></i>
+            </a>
+          </div>
+          <h4 class="text-xl font-semibold mb-4">Legal</h4>
+          <ul class="text-gray-400 space-y-2">
+            <li><a href="#" class="hover:text-blue-400">Privacy Policy</a></li>
+            <li><a href="#" class="hover:text-blue-400">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- Copyright -->
+      <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+        <p>&copy; 2025 NirvahaxMarkitplace. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // Get the newsletter form
+const newsletterForm = document.querySelector('.column form');
+
+// Add event listener for form submission
+newsletterForm.addEventListener('submit', function (event) {
+  event.preventDefault(); // Prevent the form from submitting the traditional way
+
+  // Get the email input value
+  const emailInput = newsletterForm.querySelector('input[type="email"]');
+  const email = emailInput.value.trim();
+
+  // Validate the email
+  if (email === '') {
+    alert('Please enter a valid email address.'); // Show an alert if the email is empty
+    return;
+  }
+
+  // Redirect to the blog page
+  window.location.href = 'blog.html';
+});
+  </script>
+
+   
+  </script> 
+  <!-- Custom Alert Modal -->
+<div id="customAlert" class="hidden fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+  <div class="bg-white p-8 rounded-lg shadow-lg text-center">
+    <h3 class="text-2xl font-bold text-gray-800">Thank You!</h3>
+    <p id="alertMessage" class="mt-4 text-gray-600"></p>
+    <button id="closeAlert" class="mt-6 bg-blue-500 text-white px-6 py-2 rounded-full hover:bg-blue-600">Close</button>
+  </div>
+</div>
+
+
+
+<script>
+  (function(){
+      emailjs.init("emfxfBX9yv1E55LNK"); // Replace with your EmailJS user ID
+  })();
+
+  document.getElementById("contactForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      emailjs.send("service_kyochwj", "template_pufzhql", {
+          name: document.getElementById("name").value,
+          email: document.getElementById("email").value,
+          phone: document.getElementById("phone").value,
+          message: document.getElementById("message").value,
+          services: document.getElementById("services").value,
+      }).then(function(response) {
+          alert("Form submitted successfully! Confirmation email sent.");
+      }, function(error) {
+          alert("Error sending email: " + error.text);
+      });
+  });
+
+// Scroll Animation for Cards
+const cards = document.querySelectorAll('.card');
+
+function checkScroll() {
+  cards.forEach((card) => {
+    const cardTop = card.getBoundingClientRect().top;
+    const cardBottom = card.getBoundingClientRect().bottom;
+
+    if (cardTop < window.innerHeight && cardBottom > 0) {
+      card.classList.add('animate');
+    }
+  });
+}
+
+window.addEventListener('scroll', checkScroll);
+
+</script>
+
+<script>
+  // Toggle chat visibility
+  function toggleChat() {
+      const chatContainer = document.getElementById('chat-container');
+      chatContainer.classList.toggle('open');
+  }
+
+  // Send message when Enter key is pressed
+  function handleKeyPress(event) {
+      if (event.key === 'Enter') {
+          sendMessage();
+      }
+  }
+
+  // Send user message
+  function sendMessage() {
+      const userInput = document.getElementById('user-input');
+      const chatMessages = document.getElementById('chat-messages');
+
+      if (userInput.value.trim() === '') return;
+
+      // Display user message
+      const userMessage = document.createElement('div');
+      userMessage.classList.add('message', 'user-message');
+      userMessage.textContent = userInput.value;
+      chatMessages.appendChild(userMessage);
+
+      // Generate bot response
+      const botResponse = getBotResponse(userInput.value);
+
+      // Display bot response
+      setTimeout(() => {
+          const botMessage = document.createElement('div');
+          botMessage.classList.add('message', 'bot-message');
+          botMessage.textContent = botResponse;
+          chatMessages.appendChild(botMessage);
+          chatMessages.scrollTop = chatMessages.scrollHeight;
+      }, 500);
+
+      // Clear input
+      userInput.value = '';
+  }
+
+  // Generate bot response based on user input
+  function getBotResponse(userMessage) {
+      userMessage = userMessage.toLowerCase();
+
+      if (userMessage.includes('hi') || userMessage.includes('hello') || userMessage.includes('hlo')) {
+          return 'Hello! How can I assist you today?';
+      } else if (userMessage.includes('contact')) {
+          return 'You can contact us at info@nirvahaxmarkitplace.in or call +91 885-176-1599.';
+      } else if (userMessage.includes('services')) {
+          return 'We offer a wide range of services including web development, SEO, and digital marketing.';
+      } else if (userMessage.includes('trend') || userMessage.includes('trending')) {
+          return 'Here are the latest trends: [Insert trending topics or products].';
+      } else if (userMessage.includes('who are you')) {
+          return 'We are an AI-driven research and marketing company. Our mission is to provide data-driven insights and innovative solutions to help businesses grow. Based on our research, we offer a variety of services tailored to meet your unique needs. How can we assist you today?';
+      } else if (userMessage.includes('bye')) {
+          return 'Goodbye! Have a great day!';
+        } else if (userMessage.includes('website') || userMessage.includes('address')) {
+          return 'You can visit us on www.nirvahxmarkitplace.in!';
+      } else {
+          return 'I’m sorry, I didn’t understand that. Can you please rephrase?';
+      }
+  }
+</script>
+
+<script>
+  // Animation on scroll
+  const expertThoughts = document.querySelectorAll('.expert-thought');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  expertThoughts.forEach(thought => {
+    observer.observe(thought);
+  });
+</script>
+
+</body>
+</html>

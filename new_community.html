@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nirvahax Markitplace</title>
+   <!-- Favicon -->
+   <link rel="icon" type="image/x-icon" href="favicon/android-chrome-512x512.png">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+ <style>
+    /* General Styles */
+.community-section {
+  padding: 80px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #ff6f61, #ffcc66, #6b5b95, #88b04b, #f7cac9);
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease infinite;
+  overflow: hidden;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.community-section h2 {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.community-section p {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 60px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Community Web Layout */
+.community-web {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.profile-node {
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+ 
+  align-items: center;
+  transition: all 0.5s ease;
+  transform: translate(calc(var(--x) * 150px), calc(var(--y) * 150px));
+}
+
+.profile-node:hover {
+  width: 350px;
+  height: 350px;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+ 
+}
+
+.profile-image {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  padding: 10px;
+}
+
+.profile-node:hover .profile-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50px;
+}
+
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50px;
+}
+
+.profile-details {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  padding: 0;
+}
+
+.profile-node:hover .profile-details {
+  opacity: 1;
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  text-align: center;
+  
+}
+
+.profile-details h3 {
+  font-size: 1.5rem;
+  color: #2c3e50;
+  margin-bottom: 5px;
+}
+
+.profile-details .expertise {
+  font-size: 1rem;
+  color: #2980b9;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.profile-details .review {
+  font-size: 0.9rem;
+  color: #34495e;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.profile-details .client {
+  font-size: 0.8rem;
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+.connection-line {
+  position: absolute;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.5);
+  transform-origin: left;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+  
+    @keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px); /* Smaller bounce */
+  }
+}
+
+.animate-bounce {
+  animation: bounce 2s infinite;
+}
+
+  /* Keyframes for smooth fly-in animation */
+  @keyframes smoothFlyIn {
+    from {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  /* Apply smooth animation to the heading */
+  .animate-smooth-fly-in {
+    animation: smoothFlyIn 1.5s ease-out forwards;
+    opacity: 0; /* Start invisible */
+  }
+
+  /* Apply smooth animation to the paragraph with a delay */
+  .animate-smooth-fly-in-delay {
+    animation: smoothFlyIn 1.5s ease-out 0.5s forwards;
+    opacity: 0; /* Start invisible */
+  }
+
+  /* Apply smooth animation to the button with a longer delay */
+  .animate-smooth-fly-in-delay-2 {
+    animation: smoothFlyIn 1.5s ease-out 1s forwards;
+    opacity: 0; /* Start invisible */
+  }
+
+  /* Hover effect for the button */
+  .hover\:scale-105:hover {
+    transform: scale(1.05);
+  }
+</style>
+<script type="text/javascript"
+src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+(function(){
+emailjs.init({
+publicKey: "emfxfBX9yv1E55LNK",
+});
+})();
+</script>
+</head>
+<body class="bg-gray-100 font-sans">
+  <nav class="navbar bg-white shadow-lg">
+    <div class="max-w-6xl mx-auto px-4">
+        <div class="flex justify-between items-center">
+            
+            <!-- Logo on the Left Side -->
+             <div class="flex items-center space-x-4">
+                 <!-- <a href="Index-1.html">
+                    <img src="NXM.gif" alt="Nirvahax Markitplace Logo" class="h-24 w-auto rounded-full">
+                </a>   -->
+                <a href="Index-1.html">
+                  <video autoplay loop muted playsinline class="w-24 h-auto rounded-lg">
+                      <source src="logo/Nirvhax.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                  </video>
+              </a>   
+            </div>
+
+            <!-- Navbar Links -->
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="about.html" class="nav-link py-4 px-2">About Us</a>
+                <a href="services.html" class="nav-link py-4 px-2">Service</a>
+                <a href="price.html" class="nav-link py-4 px-2">Pricing</a>
+                <!-- <a href="new_community.html" class="nav-link py-4 px-2">Our Community</a> -->
+                <a href="blog.html" class="nav-link py-4 px-2">Blog</a>
+                <a href="Index-1.html#contact" class="nav-link py-4 px-2">Contact</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<section class="community-section">
+    <h2>Our Growing Community</h2>
+    <p>Meet the talented individuals who make our community thrive.</p>
+    <div class="community-web">
+      <!-- User Profile 1 -->
+      <div class="profile-node" style="--x: 0; --y: 0;">
+        <div class="profile-image">
+          <img src="images/aasmi creator.avif" alt="aasi">
+        </div>
+        <div class="profile-details">
+          <h3>Aasmi Grace</h3>
+          <p class="expertise">Graphic, Visual, and UI/UX Designer</p>
+          <p class="review">Absolutely stunning work! The invitations were beautifully designed, capturing the event’s theme perfectly. Highly professional and creative!
+
+          </p>
+          <p class="client"> </p>
+        </div>
+      </div>
+      <!-- User Profile 2 -->
+      <div class="profile-node" style="--x: 1; --y: 1;">
+        <div class="profile-image">
+          <img src="images/suraj yadav.jpg" alt="Suraj Yadav">
+        </div>
+        <div class="profile-details">
+          <h3>Suraj Yadav</h3>
+          <p class="expertise">Market Research</p>
+          <p class="review">Suraj is a skilled Market Research & Data Visualization Specialist! Their insights are clear, data-driven, and visually impactful. Highly professional and reliable!
+
+          </p>
+          <p class="client"> </p>
+        </div>
+      </div>
+      <!-- User Profile 3 -->
+      <div class="profile-node" style="--x: -1; --y: 1;">
+        <div class="profile-image">
+          <img src="images/gourav.jpg" alt="Gourav Kumar">
+        </div>
+        <div class="profile-details">
+          <h3>Gourav Kumar</h3>
+          <p class="expertise">Video Editor/Content Creator</p>
+          <p class="review"> Gourav is an outstanding video editor! They delivered high-quality, engaging content with great attention to detail and creativity!</p>
+          <p class="client"></p>
+        </div>
+      </div>
+      <!-- User Profile 4 -->
+      <div class="profile-node" style="--x:-1 ; --y: -1;">
+        <div class="profile-image">
+          <img src="images/ananya.jpg" alt="Ananya Singh">
+        </div>
+        <div class="profile-details">
+          <h3>Ananya Singh</h3>
+          <p class="expertise">Data Visualization Specialist</p>
+          <p class="review">Data Visualization Specialist transforming complex data into clear, engaging, and actionable insights through interactive and visually compelling graphics.</p>
+          <p class="client"></p>
+        </div>
+      </div> 
+       <!-- User Profile 5 -->
+       <div class="profile-node" style="--x: 1; --y: -1;">
+        <div class="profile-image">
+          <img src="images/komal.jpeg" alt="Sarah Lee">
+        </div>
+        <div class="profile-details">
+          <h3>Komal Khare</h3>
+          <p class="expertise">Digital Marketer for B2B & E-commerce </p>
+          <p class="review">Digital Marketer specializing in B2B and E-commerce, driving growth through targeted strategies, lead generation, and conversion optimization.</p>
+          <p class="client"></p>
+        </div>
+      </div>
+       <!-- User Profile 6 -->
+       <div class="profile-node" style="--x: -2; --y: 0;">
+        <div class="profile-image">
+          <img src="images/Madhur.jpeg" alt="Sarah Lee">
+        </div>
+        <div class="profile-details">
+          <h3>Madhur Tyagi</h3>
+          <p class="expertise">AI Enabled Digital Marketing Specialist</p>
+          <p class="review">AI-Enabled Digital Marketing Specialist leveraging advanced technology and data-driven strategies to optimize campaigns, enhance audience targeting, and drive business growth.</p>
+          <p class="client"></p>
+        </div>
+      </div>
+      <!-- User Profile 7 -->
+      <div class="profile-node" style="--x: 2; --y: 0;">
+        <div class="profile-image">
+          <img src="images/Bhakar.jpeg" alt="Sarah Lee">
+        </div>
+        <div class="profile-details">
+          <h3>Bhaskar Kumar</h3>
+          <p class="expertise"> Digital Marketer | #MetaAds & #PPC Specialist </p>
+          <p class="review">Experienced Digital Marketer specializing in Meta Ads and PPC campaigns, helping brands drive targeted traffic and maximize conversions.</p>
+          <p class="client"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Footer Section -->
+<footer class="bg-gray-800 text-white py-12">
+    <div class="container mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Company Info -->
+        <div>
+          <h3 class="text-2xl font-bold mb-4">NirvahaX Markitplace</h3>
+          <p class="text-gray-400">Your trusted partner in AI-powered marketing and digital solutions.</p>
+        </div>
+
+        <!-- Contact Info -->
+        <div>
+          <h4 class="text-xl font-semibold mb-4">Contact Us</h4>
+          <ul class="text-gray-400 space-y-2">
+            <li><i class="fas fa-phone mr-2"></i> +91 8851 761 599</li>
+            <li><i class="fas fa-envelope mr-2"></i> info@nirvahaxmarkitplace.in</li>
+            <li><i class="fas fa-globe mr-2"></i> <a href="https://www.nirvahaxmarkitplace.in" target="_blank" class="hover:text-blue-400">www.nirvahaxmarkitplace.in</a></li>
+          </ul>
+        </div>
+
+        <!-- Social & Legal Links -->
+        <div>
+          <h4 class="text-xl font-semibold mb-4">Connect With Us</h4>
+          <div class="flex space-x-4 mb-6">
+            <a href="https://www.linkedin.com/company/niravahx-markitplace/?viewAsMember=true" target="_blank" class="text-gray-400 hover:text-blue-400">
+              <i class="fab fa-linkedin text-2xl"></i>
+            </a>
+          </div>
+          <h4 class="text-xl font-semibold mb-4">Legal</h4>
+          <ul class="text-gray-400 space-y-2">
+            <li><a href="#" class="hover:text-blue-400">Privacy Policy</a></li>
+            <li><a href="#" class="hover:text-blue-400">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- Copyright -->
+      <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+        <p>&copy; 2025 NirvahaxMarkitplace.in. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+ <script>
+    // Dynamic Connection Lines
+const profileNodes = document.querySelectorAll(".profile-node");
+const communityWeb = document.querySelector(".community-web");
+
+profileNodes.forEach((node) => {
+  const line = document.createElement("div");
+  line.classList.add("connection-line");
+  communityWeb.appendChild(line);
+
+  node.addEventListener("mouseenter", () => {
+    line.style.opacity = 1;
+  });
+
+  node.addEventListener("mouseleave", () => {
+    line.style.opacity = 0;
+  });
+});
+ </script>
+  </body>
+  </html>

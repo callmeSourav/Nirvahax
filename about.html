@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NirvahaX Markitplace</title>
+   <!-- Favicon -->
+   <link rel="icon" type="image/x-icon" href="favicon/android-chrome-512x512.png">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+   
+    /* Navbar Styling */
+    .navbar {
+      /* background: linear-gradient(to right, #1a2980, #26d0ce); */
+      background-color: white;
+      position: sticky; 
+     top: 0;
+    left: 0;
+    width: 100%;
+     
+    z-index:  1000;
+    }
+    .nav-link {
+      /* color: #ffffff; White text */
+      color: black;
+      font-weight: 500;
+      transition: color 0.3s ease, background-color 0.3s ease;
+    }
+    .nav-link:hover {
+      color: #ff6b6b; /* Light red color on hover */
+      background-color: rgba(255, 255, 255, 0.1); /* Slight white background on hover */
+      border-radius: 4px;
+    }
+    .nav-link.active {
+      color: #ff6b6b; /* Light red color for active link */
+      border-bottom: 2px solid #ff6b6b; /* Underline effect */
+    }
+  </style>
+</head>
+<body py-20 bg-blue-50>
+  <!-- Navbar -->
+  <nav class="navbar bg-white shadow-lg">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex justify-between">
+         <div class="flex space-x-7">
+         
+          <!-- <a href="Index-1.html" class="flex items-center py-4 px-2">
+            <img src="NXM.gif" alt="NirvahaX Markitplace Logo" class="h-24 w-auto rounded-full object-cover"> 
+            <span class="font-semibold md:text-4xl text-gray-50 text-lg ml-3"></span>
+          </a> -->
+
+          <a href="Index-1.html">
+            <video autoplay loop muted playsinline class="w-24 h-auto rounded-lg">
+                <source src="logo/Nirvhax.mp4" type="video/mp4">
+                <span class="font-semibold md:text-4xl text-gray-50 text-lg ml-3"></span>
+                Your browser does not support the video tag.
+            </video>
+        </a>   
+        </div> 
+
+
+        <!-- <div class="flex space-x-7">
+          <a href="#home" class="flex items-center py-4 px-2">
+            <video autoplay loop muted playsinline class="h-26 w-24 rounded-xl">
+              <source src="Nirvahax-video logo.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </a>
+        </div> -->
+
+        <div class="hidden md:flex items-center space-x-1">
+          <a href="Index-1.html" class="nav-link py-4 px-2">Home</a>
+          
+          <!-- <a href="#service" class="nav-link py-4 px-2">Services</a>
+          <a href="#community" class="nav-link py-4 px-2">Community</a>
+          <a href="#clients" class="nav-link py-4 px-2">Clients & Projects</a>
+          <a href="#contact" class="nav-link py-4 px-2">Contact</a> -->
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- About Section -->
+<section id="about" class="py-20 bg-gradient-to-r from-blue-50 to-purple-50">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl md:text-5xl font-bold text-center text-gray-800 mb-8">About Us</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <!-- About Image Grid -->
+        <div class="grid grid-cols-2 gap-4">
+          <div class="rounded-lg overflow-hidden shadow-lg">
+            <!-- <img src="video-1.mp4" alt="About Us Image 1" class="w-full h-64 object-cover"> -->
+            <video autoplay muted loop class="w-full h-full object-cover">
+              <source src="videos/video-1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="rounded-lg overflow-hidden shadow-lg">
+            <!-- <img src="video-2.mp4" alt="About Us Image 2" class="w-full h-64 object-cover"> -->
+            <video autoplay muted loop class="w-full h-full object-cover">
+              <source src="videos/video-7.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="rounded-lg overflow-hidden shadow-lg">
+            <!-- <img src="video-3.mp4" alt="About Us Image 3" class="w-full h-64 object-cover"> -->
+            <video autoplay muted loop class="w-full h-full object-cover">
+              <source src="videos/video-4.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="rounded-lg overflow-hidden shadow-lg">
+            <!-- <img src="video-4.mp4" alt="About Us Image 4" class="w-full h-64 object-cover"> -->
+            <video autoplay muted loop class="w-full h-full object-cover">
+              <source src="videos/video-5.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+
+        <!-- About Content -->
+        <div>
+          <h3 class="text-3xl font-bold text-gray-800">Who We Are</h3>
+          <p class="mt-4 text-lg text-gray-600">
+            At <span class="font-semibold text-blue-600">NirvahaX Markitplace</span>, we are revolutionizing the way businesses, startups, and entrepreneurs access AI-powered marketing and digital services. Our platform offers cutting-edge solutions to help brands grow, engage, and dominate their industries with data-driven insights and automation.
+          </p>
+
+          <h3 class="text-3xl font-bold text-gray-800 mt-8">What We Do</h3>
+          <p class="mt-4 text-lg text-gray-600">
+            We provide a comprehensive suite of digital services tailored for startups, businesses, and content creators. Our core offerings include:
+          </p>
+
+          <!-- Services List with Icons -->
+          <div class="mt-6 space-y-6">
+            <!-- Social Media Services -->
+            <div class="flex items-start">
+              <div class="bg-blue-100 p-3 rounded-full">
+                <i class="fas fa-share-alt text-blue-600 text-2xl"></i>
+              </div>
+              <div class="ml-4">
+                <h4 class="text-xl font-semibold text-gray-800">Social Media Services</h4>
+                <p class="mt-2 text-gray-600">
+                  We help brands establish a strong online presence and maximize their social media impact through content creation, advertising, and influencer marketing.
+                </p>
+              </div>
+            </div>
+
+            <!-- AI-Powered Market Research -->
+            <div class="flex items-start">
+              <div class="bg-purple-100 p-3 rounded-full">
+                <i class="fas fa-chart-line text-purple-600 text-2xl"></i>
+              </div>
+              <div class="ml-4">
+                <h4 class="text-xl font-semibold text-gray-800">AI-Powered Market Research</h4>
+                <p class="mt-2 text-gray-600">
+                  Our AI-driven tools provide real-time market trends, competitor analysis, and brand positioning strategies.
+                </p>
+              </div>
+            </div>
+
+            <!-- Digital Marketing & SEO -->
+            <div class="flex items-start">
+              <div class="bg-green-100 p-3 rounded-full">
+                <i class="fas fa-search text-green-600 text-2xl"></i>
+              </div>
+              <div class="ml-4">
+                <h4 class="text-xl font-semibold text-gray-800">Digital Marketing & SEO</h4>
+                <p class="mt-2 text-gray-600">
+                  We ensure maximum online visibility with SEO, PPC advertising, and AI-powered email marketing.
+                </p>
+              </div>
+            </div>
+
+            <!-- Website & App Development -->
+            <div class="flex items-start">
+              <div class="bg-yellow-100 p-3 rounded-full">
+                <i class="fas fa-code text-yellow-600 text-2xl"></i>
+              </div>
+              <div class="ml-4">
+                <h4 class="text-xl font-semibold text-gray-800">Website & App Development</h4>
+                <p class="mt-2 text-gray-600">
+                  We build high-performing websites and apps with custom designs and AI integration.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Call to Action -->
+          <div class="mt-8">
+            <h3 class="text-3xl font-bold text-gray-800">Why Choose NirvahaX Markitplace?</h3>
+            <p class="mt-4 text-lg text-gray-600">
+              We are committed to helping businesses thrive in the digital age with AI-powered, data-driven solutions tailored to your needs.
+            </p>
+            <div class="mt-6">
+              <a href="Index-1.html#contact" class="bg-blue-600 text-white px-8 py-4 rounded-full hover:bg-blue-700 text-lg font-semibold">Contact Us Today</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="bg-gray-800 text-white py-12">
+    <div class="container mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Company Info -->
+        <div>
+          <h3 class="text-2xl font-bold mb-4">NirvahaX Markitplace</h3>
+          <p class="text-gray-400">Your trusted partner in AI-powered marketing and digital solutions.</p>
+        </div>
+
+        <!-- Contact Info -->
+        <div>
+          <h4 class="text-xl font-semibold mb-4">Contact Us</h4>
+          <ul class="text-gray-400 space-y-2">
+            <li><i class="fas fa-phone mr-2"></i> +91 8851 761 599</li>
+            <li><i class="fas fa-envelope mr-2"></i> info@nirvahaxmarkitplace.in</li>
+            <li><i class="fas fa-globe mr-2"></i> <a href="https://www.nirvahaxmarkitplace.in" target="_blank" class="hover:text-blue-400">www.nirvahaxmarkitplace.in</a></li>
+          </ul>
+        </div>
+
+        <!-- Social & Legal Links -->
+        <div>
+          <h4 class="text-xl font-semibold mb-4">Connect With Us</h4>
+          <div class="flex space-x-4 mb-6">
+            <a href="https://www.linkedin.com/company/niravahx-markitplace/?viewAsMember=true" target="_blank" class="text-gray-400 hover:text-blue-400">
+              <i class="fab fa-linkedin text-2xl"></i>
+            </a>
+          </div>
+          <h4 class="text-xl font-semibold mb-4">Legal</h4>
+          <ul class="text-gray-400 space-y-2">
+            <li><a href="#" class="hover:text-blue-400">Privacy Policy</a></li>
+            <li><a href="#" class="hover:text-blue-400">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+        <p>&copy; 2025 NirvahaX Markitplace. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
